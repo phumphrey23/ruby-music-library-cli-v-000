@@ -20,5 +20,4 @@ class Base
 		new(name).save
 	end
 
-
 end
