@@ -5,19 +5,17 @@ class Base
 
 	attr_accessor :name
 
-	#@@all = []
+	#def self.all
+	#	@@all
+	#end
 
-	def self.all
-		@@all
-	end
+	#def save
+	#	@@all << self
+	#	self
+	#end
 
-	def save
-		@@all << self
-		self
-	end
-
-	def self.create(name)
-		new(name).save
-	end
+	#def self.create(name)
+	#	new(name).save
+	#end
 
 end
