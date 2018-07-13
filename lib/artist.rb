@@ -2,6 +2,8 @@ class Artist < Base
 
   attr_reader :songs, :genre
 
+  @@all = []
+
   def initialize(name)
     @name = name
     @songs = []
@@ -9,7 +11,7 @@ class Artist < Base
 
   def add_song(song)
       song.artist = self unless song.artist
-      songs << song unless songs.include?(song)
+      self.songs << song unless self.songs.include?(song)
       song
     end
 
