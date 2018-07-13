@@ -46,7 +46,7 @@ end
   def list_artists
     sorted_artists = Artist.all.sort {|a, b| a.name <=> b.name}
     sorted_artists.each_with_index do |artist, index|
-      puts "#{index + 1}. #{artist.name}"
+      puts "#{index + 1}. #{artist}"
     end
   end
 
