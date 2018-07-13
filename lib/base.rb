@@ -5,17 +5,4 @@ class Base
 
 	attr_accessor :name
 
-	#def self.all
-	#	@@all
-	#end
-
-	#def save
-	#	@@all << self
-	#	self
-	#end
-
-	#def self.create(name)
-	#	new(name).save
-	#end
-
 end
