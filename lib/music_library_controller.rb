@@ -36,12 +36,6 @@ class  MusicLibraryController
 end
 
 
-  def list_sorter
-    sorted = self.class.all.sort {|a, b| a.name <=> b.name}
-    sorted.delete_if {|object|object==nil}
-    sorted.uniq
-  end
-
   def list_songs
     sorted_songs = Song.all.sort {|a, b| a.name <=> b.name}
     sorted_songs.each_with_index do |song, index|
@@ -50,14 +44,14 @@ end
   end
 
   def list_artists
-    sorted_artists = Artist.all.sort_by {|artist| artist.name}
+    sorted_artists = Artist.all.sort {|a, b| a.name <=> b.name}
     sorted_artists.each_with_index do |artist, index|
       puts "#{index + 1}. #{artist.name}"
     end
   end
 
   def list_genres
-    sorted_genres = Genre.list_sorter
+    sorted_genres = Genre.all.sort {|a, b| a.name <=> b.name}
     sorted_genres.each_with_index do |artist, index|
       puts "#{index + 1}. #{artist.name}"
     end
