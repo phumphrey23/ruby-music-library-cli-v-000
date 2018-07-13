@@ -5,7 +5,7 @@ class Base
 
 	attr_accessor :name
 
-	@@all = []
+	#@@all = []
 
 	def self.all
 		@@all
