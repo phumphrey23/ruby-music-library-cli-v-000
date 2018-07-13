@@ -16,7 +16,7 @@ class Base
 	end
 
 	def self.create(name)
-		new(name).tap{ |i| i.save }
+		new(name).save
 	end
 
 
