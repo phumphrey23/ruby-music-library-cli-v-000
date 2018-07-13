@@ -22,6 +22,19 @@ class Song < Base
     self.genre.add_song(self)
   end
 
+  def self.all
+    @@all
+  end
+
+  def save
+    @@all << self
+    self
+  end
+
+  def self.create(name)
+    new(name).save
+  end
+
   def self.new_from_filename(filename)
     file = filename.gsub(".mp3", "").split(" - ")
     artist = Artist.find_or_create_by_name(file[0])
