@@ -13,7 +13,7 @@ class Base
 
 	def save
 		@@all << self
-		@@all
+		self
 	end
 
 	def self.create(name)
