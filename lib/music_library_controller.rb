@@ -43,7 +43,7 @@ end
   end
 
   def list_songs
-    sorted_songs = Song.list_sorter
+    sorted_songs = Song.all.sort {|a, b| a.name <=> b.name}
     sorted_songs.each_with_index do |song, index|
       puts "#{sorted_songs.index(song) + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
