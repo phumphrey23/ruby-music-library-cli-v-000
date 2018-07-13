@@ -6,7 +6,7 @@ class Song < Base
     @name = name
     self.artist = artist if artist
     self.genre = genre if genre
-    self.save
+    self.save.uniq
   end
 
   def artist=(artist)
