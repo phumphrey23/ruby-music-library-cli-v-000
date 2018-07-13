@@ -26,7 +26,7 @@ class Song < Base
   end
 
   def self.create_from_filename(filename)
-    new_from_filename(filename).tap{ |song| song.save }
+    new_from_filename(filename).save
   end
 
 end
