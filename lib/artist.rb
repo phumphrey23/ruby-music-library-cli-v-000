@@ -10,6 +10,7 @@ class Artist < Base
   def add_song(song)
       song.artist = self unless song.artist
       songs << song unless songs.include?(song)
+      song
     end
 
     def genres
