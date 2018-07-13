@@ -9,6 +9,19 @@ class Genre < Base
     @songs = []
   end
 
+  def self.all
+    @@all
+  end
+
+  def save
+    @@all << self
+    self
+  end
+
+  def self.create(name)
+    new(name).save
+  end
+
   def add_song(song)
       song.genre = self unless song.genre
       songs << song unless songs.include?(song)
