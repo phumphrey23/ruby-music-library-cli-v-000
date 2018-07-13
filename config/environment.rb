@@ -3,21 +3,12 @@ Bundler.require
 
 module Concerns
 
-  module InstanceMethods
-  #  def save
-  #    self.class.all << self
-  #  end
-  end
-
   module ClassMethods
 
     def destroy_all
       self.all.clear
     end
 
-#    def self.create(name)
-#      new(name).tap{ |i| i.save }
-#    end
   end
 
   module Findable
