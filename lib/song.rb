@@ -1,3 +1,4 @@
+require 'pry'
 class Song < Base
 
   attr_reader :artist, :genre
@@ -23,6 +24,7 @@ class Song < Base
     file = filename.gsub(".mp3", "").split(" - ")
     artist = Artist.find_or_create_by_name(file[0])
     genre = Genre.find_or_create_by_name(file[2])
+    binding.pry
     Song.new(file[1], artist, genre)
   end
 
