@@ -83,7 +83,7 @@ end
     puts "Which song number would you like to play?"
     user_input = gets.strip.to_i
     if user_input > 0 && user_input < Song.all.length + 1
-      song = Song.list_sorter[user_input-1]
+      song = Song.all.sort_by {|song|song.name}[user_input-1]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
