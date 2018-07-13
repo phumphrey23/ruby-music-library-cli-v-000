@@ -13,6 +13,7 @@ class Base
 
 	def save
 		@@all << self
+		@@all
 	end
 
 	def self.create(name)
