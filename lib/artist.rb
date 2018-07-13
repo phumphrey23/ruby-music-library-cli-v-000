@@ -12,7 +12,7 @@ class Artist < Base
       songs << song unless songs.include?(song)
     end
 
-    def genres
+    def genre
       songs.collect{ |song| song.genre }.uniq
     end
 
