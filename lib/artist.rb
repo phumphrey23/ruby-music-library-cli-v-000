@@ -13,7 +13,7 @@ class Artist < Base
     end
 
     def genres
-      songs.collect{ |s| s.genre }.uniq
+      songs.collect{ |song| song.genre }.uniq
     end
 
 end
